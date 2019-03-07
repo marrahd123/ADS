@@ -1,0 +1,24 @@
+CIS-3333 Spring 2019 Program 3 - Dynamic Memory Management - due 11:59pm 3/8/2019
+
+Print one line of output to the screen: the number of linked list nodes (as specificed below) that you were able to dequeue through your linked list before running out of memory.  
+Attempt to manage your memory so that you never run out of memory, in which case you should report completion of 100,012 dequeue operations.
+
+Write the C-language code for a linked list node structure that stores a pointer to a string as its data.  
+Assuming this will be used in a queue, write the functions needed to enqueue at the tail of the queue and dequeue from the head of the queue.  
+Your enqueue should accept a pointer to the string that is to be enqueued, attempt to create the node structure to store it, attempt to insert the structure into the queue, and return an integer error code.  
+Your dequeue should act as a peek, returning a pointer to the string that was just dequeued or null in the case of a failure.  Both enqueue and dequeue should also accept the address of a pointer to the head and the address of a pointer to the tail.
+
+Write a C-language main function that will test your code.  
+1. Begin by enqueueing 10 nodes.  
+2. Then enter a loop that will iterate 100,000 times.  
+3. Each time the loop iterates, enqueue 1 node and then dequeue 1 node.  
+4. After the loop has completed, dequeue 12 nodes.  
+(If you coded your dequeue correctly, this will dequeue the remaining 10 nodes but will not crash your code to twice dequeue from an empty queue.)  
+At the end of your program, you should have enqueued 100,010 nodes and dequeued 100,010 nodes but there should have never been more than 11 nodes in your queue at any time.
+
+All strings in this program should each be independently created groups of 1,000,000 randomly generated characters, each one in its own dynamically allocated memory space.
+
+If your enqueue ever reports a failure, terminate your loop and report the iteration number.  If your random string generation ever fails, terminate your loop and report the iteration number.
+
+int enqueue (char * string, struct node ** front, struct node ** tail);
+char * dequeue (struct node ** front, struct node ** tail);
