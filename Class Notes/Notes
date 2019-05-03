@@ -1,0 +1,300 @@
+------RUNTIME ANALYSIS-----------
+SimplisticBubbleSort = 
+Best = 8n^2-3N+4
+Worst = 14n^2-9N+4
+ SimplisticBubbleSort
+        int SimplisticBubbleSort (int * data, int length){
+        int lcv1, lcv2;
+        
+        (1 + 1)
+        4If - 1 Unit 
+        4(data != NULL) - 1 Unit
+            (1 + 1*(N+1) + 1*N)
+            5 lcv1 = 0 - 1 unit;
+            5 lcv1 < length - (1*(n+1)) Unit
+            5 lcv1++ - 1*n unit 
+                (N * (1 + 2*(N+1-1) + 1*(N-1))
+                6 lcv2 = 0 - 1 unit;
+                6 lcv2 < length - (1*(n+1)) Unit
+                6 lcv2++ - 1*n unit
+                (N*(N-1)*(1+1+1+1+1))
+                7 If - 1 
+                7 data[lcv2] < data[lcv2+2] - Inequality - 1 
+                7 [lcv2+1] - 1 unit
+                7 data[lvc2] - 1 unit
+                7 data[lvc2 +1] - 1 unit
+                (N*(N-1)*(1+1+1+1+1+1))
+                8 data[lcv2]
+                9 data[lcv2]
+                9 lcv2 + 1
+                9 data[lcv2+1]
+                10 data[lcv2+1]
+                10 lcv2+1
+                (1)
+
+
+Worst case for his ImprovedBubbleSort - O(6n^2 + 1n +2)
+Best Case = (6n+10)
+Any time you have best case and worst case, there is no theta analysis (unless its the same)
+
+-TEST: Optimization simplistic bubble sort vs. improved bubble sort
+
+-Analysis of Recursive Cose
+RecBinSearch
+IterLinSearch ***** EXAM?
+for lcv = 0 (1 unit)
+lcv < length (n+1)
+lcv ++ (n units)
+if...(1 unit + array lookup 1 + 1 equality check) = 1+1+1
+return lcv (1 unit)
+}
+}
+return( = or 1)
+
+TOTAL: 1+(N+1)+(N)
+        N * (1+1+1)
+        1 OR 1
+1)  O(5N+3) WORST CASE
+2) BEST CASE: (6)  (1+1) +(1+1+1) +1
+-Data Sensitive 
+    Best case is 1st element, worst case is last element
+
+After commenting out 1st return and uncommenting the print statement:
+-You can now repeat the print statement (where the 1st return was) which changes worst case, but best case stays the same
+- If you are looking for a 1 in an array of 0's, it won't print
+-Worst case: O(6n+3)
+-Best Case: O(5n+4)
+
+-Data insensitive
+    printing the letter a: NO POSSIBILITY OF VARIANCE
+
+-----------POINTERS---------------
+
+
+------------------------------------------
+In c, all character arrays are strings but not all strings are character arrays. All strings must be null terminated
+
+Free – dynamically deallocates what mallocate did 
+
+----------Prim's Algorithm-----------------
+1. Prim's is a minimal spanning tree algorithm
+    - does not use an edge more than once
+    - minimal number of edges to connect all of the nodes
+2. Adjacency Matrix
+3. Visited, Cost, Previous
+    - start by setting all nodes to univisited, cost infinite, no previous nodes
+4. breadth first traversal
+
+-----------Dijkstra's Shortest Path Algorithm------------------
+1. Create an adjacency matrix
+    - going to & coming from 
+2. Create a 3 column chart
+    - Visited, Cost, Previous - columns
+    - (0,1,2,3,4 (on computer) or A,B,C,D,E) - rows/ nodes
+    - Put in invalid values (False, INT_MAX, -1) 
+3. Mark starting point as visited (true), set cost to 0, no previous (or else it wouldn't be a starting node)
+    - conditions: nonzero, current node unvisited, position + value of previous visited node has to be less than cost 
+    - All conditions must be true 
+4. Record the possible paths to find the shortest path 
+
+    ----- 2/8/19--------
+5. Dijkstra's Run-Time Performance
+    - O(N^2)
+
+--------------C Language------------------
++ Does not have classes
+1. Loops
+    - Can't declare int(or whatever) inside of a loop
+2. Arrays
+    - int data [5]; rather than int [] data = new int [5];
+        -mutidimensional: int name [1][1];
+    - data [0] = 42; same for java & C
+    - C language arrays do not have their own length
+        - must have a variable to set it
+3. Library Statements
+    - #include <file.h> (only #include .h files; NOT .c FILES)
+        - never #include a big file into another program
+    - "mynewlib.h"
+4. Returning something in a main:
+    - int main (void) {
+    - void main (void) { 
+    - void (or int) main ( int argc, char ** argv){
+        - char ** argv is an array of strings
+        - each * is one step away from a character ; is an address of a 2-dimensional array
+    - argv is argument vector ; argc is argument count
+5. Print
+    -printf("Hello\n"); %d part is called a format statement 
+    - print("%d",myvar);
+    - More than one variable:
+        + print(" The value of x and y are %d %d",myvar,myvar2);
+    - if you want to print "%d" then printf("%%d"); same with \n \\n
+    -%c = character
+    -%s = string--class
+    -%f = float
+    - \t
+    - \a
+6. Variables
+    - In C, any bit pattern of all zeros is false
+        - 0 = Only character in C that can be interpreted as false
+            + "FALSE", 'f', √, ... are all true
+        - 0.0 is FALSE
+        - 0 is false
+        - '\0' is false
+        - "" is the only string that is false
+    - typedef
+        - short int = long
+        - long int = long
+        - time_int = indistinguishable from int
+7. Optimization
+    - sized characters
+    - unsized characters
+8. Switch/case
+    - Break; //mechanism to get out of the case sequence 
+9. Pointer
+    -is a *
+    -ex. int *ip;
+    -ex. int **ipp;
+    - ip = &x; //ip now points to x
+    -WHY: void*v;
+        v = &v;
+    
+
+------------COMPILING TERMINAL IN C-------------
+gcc hello-c-world.c -o test
+mdelmont:~/workspace $ ./test
+
+
+--------Algorithmic Philosophies-----------
+1. Brute force / Exhausted algorithm
+    - going through all of the possibilities
+2. Divide and Conquer
+    -
+3. Dynamic Programming
+    - don't throw away work until you know you no longer need it
+4. Randomized
+    - 
+5. Branch and Bound
+    -
+6. Greedy
+    -
+7. Backtracking
+    - not unnecessarily creating work
+    - LIFO
+    - do not throw away moves until you know they are not a partial subsolution
+    
+-------LINEAR RUNTIME SORTING-------------
+- Counting the frequency/occurrances the the random list of numbers appear in the index value for that number
+    - Counter sort / counting sort
+    - Runtime = O(2n + R) where R is the range of data; R is uncountably infinite if between 0 and 1
+    - You would need an uncountably infinite array (impossible)
+    - Cannot countersort real numbers
+- External Sorting
+
+- Reading one value at a time from a file and writing one value of data to a file
+
+
+reading in numbers from a file
+putting them into a counter array, not putting into RAM
+putting them into a file one at a time
+
+
+------MORE LINEAR RUNTIME------
+2. Radix Sort
+    - Developed by IBM to handle credit card accounts
+    - implemented with counter sort as a subsection of it
+        - It will sort based on columns, starting with least significant andmoving to most significant digit
+3. Bucket Sort
+    - 
+    
+-------PARALLEL-------
+scenario: you have an array, want to search array in parallel
+- Linear search has for first match and all matches
+- record match as soon as its found, does not need to be sorted
+    - do not use multiple print statements. Have 2 pieces of code use single print line
+    
+TWO PROGRAMS:
+1. Take array - can code in Java 
+    - Indexes 0-499 are yours, 500-999 are elses
+    - sit at same row in different chairs at the same time (example)
+    - divide up array locations
+    - 2 pieces of code looking at same array
+
+2. Parallel Countersort
+1/2N + 1/2N + N is this versus 3N countersort
+Comparing your way down subarrays, then you can merge the 2 subarrays together. (linear (N) runtime)
+
+EVEN FASTER APPROACH (if you have more numbers than range) - USE THIS ONE
+    give the computer the 2 counter arrays rather than 2 sorted arrays
+    pass in singualr arraytell threads which section of array to work with (0-499) then (500-999)
+    give back the totals, computer merges total into grand total, then replicates the data
+    subtotals are handed back by returning array, cannot be sent through the public void run though
+    you can make data array data memeber of the class. you can make get method to get the data array
+    add up subtotals count array inside run mehtod but have it located in the class object as a data memeber of the object.
+    get method will allow the main to reach into the object and get the array
+    get from both objects, add subcomponents, get grand total count array, the replicate data from that
+    (This way avoids the problem of shared memory problem)
+    Makes array of 100 - 1000 numbers, does not print to a file 
+    
+
+-------WHY PARALLEL?-----------
+
+----------SYNCHRONIZATION---------------- (DO NOT NEED FOR THE PROGRAM!!)
+Forbidding parallelism will stop shared data - bank
+Synchronization in g drive - https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html
+rw problem or race problem - single variable, tries to increment and decrement at the same time
+
+public class MsLunch {
+    private long c1 = 0;
+    private long c2 = 0;
+    private Object lock1 = new Object();
+    private Object lock2 = new Object();
+
+    public void inc1() {
+        synchronized(lock1)//locker lock {
+            c1++;
+        }
+    }
+
+    public void inc2() {
+        synchronized(lock2) {
+            c2++;
+        }
+    }
+}
+
+-------READER WRITER PROBLEM / RACE CONDITIONS---------
+rw problem or race condition - single variable, tries to increment and decrement at the same time
+whichever one saved last is the output, since its a race. a race you have to lose in order to win
+whoever comes in last can override you
+concurrent reads with a single write with no problem - if you perform your read too soon though, you can have obsolete data
+
+---------LIMITS OF COMPUTING--------
+Sometimes an impartial solution is better than no solution
+
+Before you even write your code, it would be useful to know if there is a classic unsolveable issue
+    - How quick can we go back and negotiate revised specifications or get out of the contract
+What do you do? - do your system analysis and design. but consider if it CAN EVEN BE DONE
+    - Also, should this be done? ethics
+    
+    Explain the importance of reconziging the impossible early in the software process
+    Explain why he cannot prove how he plagerized his dissertation
+    Explain why you will never be able to get away with plagerisim forever - consult redford
+    
+------POSSIBLE BUT COMPUTATIONALLY DIFFICULT-------
+Meaning - the problem is non-polynomial
+
+ex. travelling salesman - runtime hard problems. exponential problems
+
+Napsack problem - try to carry as much stuff in your backpack considering size, carrying capacity, etc.
+    -weight, value, volume
+
+Countries - 4 colors n^p
+
+-----------IMPOSSIBLE-------------
+
+--------BACKTRACKING---------
+- drive ya nuts
+
+
+--------------------------------------------------
+is there a point to give up something?

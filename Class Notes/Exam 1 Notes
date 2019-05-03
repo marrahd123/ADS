@@ -1,0 +1,59 @@
+--------Exam Notes---------
+
+1. Coding:
+    - pointers
+    - deallocating space / dynamic memory management
+    - differences between java and c
+    - printing, allocating, deallocating, etc.
+2. Runtime analysis
+    - memory analysis
+    - recursion analysis
+        - have to do a recurrance relationship - T(of)
+    - both best case and worst case 
+    - Theta: not average case, because average case suggests there is a deviation from the average. 
+        - Theta means ALWAYS. (still in n(x) fmaily, don't count the multiplicative or additives)
+        - no theta if theres n and n^2, etc.
+    - Big O / omacron - worst case
+    - Omega is best case
+3. Optimization
+    - simplistic bubble sort to improved bubble sort
+    - Try to make some imporvements to a certain algorithm
+    - example: saving erpaeated calculations so you do not repeat something unnecessarily 
+    - how much work do you really have to do = bubble sort n -1 repeated passes
+        - why go all the way through the array? don't
+4. Adjacency Matrix - perfrom Dijkstra
+5. Perform Prim's
+6. Algorithmic Philospophies
+    - essense, most important part of algorithmic philosophies
+    - examples and counterexamples of algorithmic philosophies
+
+    1. Brute force / Exhausted algorithm
+        - going through all of the possibilities
+        - linear search for all matches - going through entire array
+
+    2. Divide and Conquer
+        - quicksort
+        - binary sort
+        - mergesort
+
+    3. Dynamic Programming
+        - don't throw away work until you know you no longer need it
+            - don't unnecessarily repeat work
+        - doubly recursive fibonacci - COUNTEREXAMPLE
+        - other 3 fib ones are good examples because they are more optimized
+        
+    4. Randomized
+        - random number 
+        - quicksort: sometimes someone pick random value to use as a pivot point
+        
+    5. Branch and Bound
+
+    6. Greedy (optimal)
+        - Dijkstra
+            - lowest cost unvisited node
+        
+    7. Backtracking
+        - not unnecessarily creating work
+        - LIFO
+        - do not throw away moves until you know they are not a partial subsolution
+        - 8 queens one = stack order

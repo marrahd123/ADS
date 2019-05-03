@@ -1,0 +1,7 @@
+CIS-3333 FS2015 Program 6 - Parallel Linear Searching - Due 11am, Thursday, December 1, 2016
+
+Write a linear search in Java using the Threads class to implement parallelism as discussed in class.
+
+Have your main create a random array.  Print the array to the screen.  Ask the user for a target value.  Have 2 threads, each searching a different half of the array for all matches in parallel, reporting the index locations of all matches to the screen.
+
+Make sure your code is clearly enough commented for a CS 1 student to understand what you are doing.

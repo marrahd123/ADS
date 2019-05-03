@@ -1,0 +1,7 @@
+CIS-3333 FS2015 Program 5 - Parallel Linear Runtime Sorting - Due 5pm, Friday May 5, 2017
+
+Write Program 5 in Java using the Threads class to implement parallelism as discussed in class.
+
+Write a Counter Sort method that will Counter Sort any array of integers.
+
+Make sure your code is clearly enough commented for a CS 1 student to understand what you are doing.

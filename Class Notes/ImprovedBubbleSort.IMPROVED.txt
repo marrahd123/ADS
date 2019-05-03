@@ -1,0 +1,26 @@
+// James Cain
+int ImprovedBubbleSort (int * data, int length){
+  int lcv1, lcv2, lcv3;
+  int temp;
+  int start1, start2;
+  int notdone;
+  if (data != NULL) {
+    start1 = length - 1;
+    start2 = length - 2;
+    notdone = 1;
+    for (lcv1 = 1; notdone && (lcv1 < length); lcv1++){
+      notdone = 0;
+      for (lcv2 = start1, lcv3 = start2; lcv2 >= lcv1; lcv2--, lcv3--){
+        if (data [lcv2] < data [lcv3]){
+          notdone = 1;
+          temp = data [lcv2];
+          data [lcv2] = data [lcv3];
+          data [lcv3] = temp;
+        }
+      }
+    }
+    return 0;
+  } else {
+    return 1;
+  }
+}
