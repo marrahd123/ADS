@@ -1,0 +1,19 @@
+1. Counting the frequency/occurrances the the random list of numbers appear in the index value for that number
+// gcc CounterSort.c
+// -o CounterSort.exe //NOT C
+// ./a.out my_input.txt my_output.txt
+    
+    void main (int argc, char ** argv)
+    {
+        if (argc < 3)
+        {
+            printf("Error\n");
+        }
+    
+    FILE * infile = fopen(argv[1],"r"); 
+    FILE * outfile = fopen(argv[2],"w");
+    fscanf(infile, "%d", &x++);
+    counter[x];
+    
+    }//main
+    

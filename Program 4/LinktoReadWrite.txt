@@ -1,0 +1,20 @@
+https://www.codesdope.com/c-enjoy-with-files/
+
+#include <stdio.h>
+int main()
+{
+  FILE *fr;
+  char c;
+  fr = fopen("pract.txt", "r");
+  while( c != EOF)
+  {
+    c = fgetc(fr); /* read from file*/
+    printf("%c",c); /*  display on screen*/
+  }
+  fclose(fr);
+  fr = fopen("pract.txt", "w");
+  fprintf(fr, "%s", "This is a test of writing to a file"); /*  write to file*/
+  fclose(fr); 
+
+  return 0;
+}

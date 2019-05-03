@@ -1,0 +1,17 @@
+CIS-3333 FS2015 Program 5 - Parallel Linear Runtime Sorting - Due 11am, Thursday, December 1, 2016
+
+Redo program 4 in Java using the Threads class to implement parallelism as discussed in class.
+
++++
+
+Program 4
+
+Write a Counter Sort function that will Counter Sort any array of integers.  Use the following function prototype:
+
+int CounterSort (int * data, int length);
+
+Use the return value to report any failures.
+
+Write a main function that will accept a single command line parameter, the number of times the Countersort function should be tested with random arrays.  Create a loop that will iterate that many times, each time Counter Sorting an array of random integers of random positive length.  Test the array after it is sorted to make sure it is indeed sorted and report any failures.
+
+Make sure your code is clearly enough commented for a CS 1 student to understand what you are doing.
