@@ -298,4 +298,35 @@ Countries - 4 colors n^p
 --------------------------------------------------
 is there a point to give up something?
 
--------------Employment - Things to Consider -----------------------------------
+-------Flynn's Taxonomy-----------
+            |       |       |
+    ----->  |SISD   |SImD   |<----Single Instruction Multiple Data
+            |       |       |
+            |       |       |
+            ------- |-------|
+            |       |       |
+    ----->  |MISD   |MImD   | <---- parallel, disrtibuted (multiple different boxes, not necessarily same type of box), grid(not necessarily in same place), cluster(same type of box), etc. MULTIPLE INSTRUCTION MULTIPLE DATA
+            |       |       |
+            |       |       |
+ 
+1. Single Instruction Multiple Data
+    - vector GPU
+    - non-shared memory
+2. Single Instruction Single Data
+    - sequential
+    - non-shared memory
+3. Multiple instruciton single data
+    - probably shouldn't be used
+    - non-deterministic
+    - race - shared memory 
+4. Multiple instruciton multiple data
+    - race - because they are shared memory
+    -
+
+-------------FINAL EXAM REVIEW -----------------------------------
+-Know basic concept of 7 philosophies
+- Dijkstra and prims algorithm 
+- Linear runtime sorting - counter, bucket, radix
+- Know what external sorting is and what you have to do differently to make extrernal sorting work
+- parallel sorting - algorithmically describe it
+- unsolveable vs. run time
